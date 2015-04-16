@@ -1,4 +1,7 @@
 # IR Barrier Sensor for Arduino with LED turned for measurements only
+
+<img src="http://python.rk.edu.pl/site_media/resources/python.rk.edu.pl/images/pymcu_led_photodiode.jpg" align="right" width="200" height="223"/>
+
 Barrier/distance IR sensor Arduino library  working with lightness changes
 
  - **Can`t calibrate if lightness changes very fast * ([look below](#-fast-ligtness-changes-problem))**<br/>
