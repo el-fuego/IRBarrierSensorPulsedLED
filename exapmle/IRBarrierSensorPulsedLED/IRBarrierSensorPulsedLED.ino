@@ -1,8 +1,8 @@
 #include <IRBarrierSensorPulsedLED.h>
 
 // setup pins
-barrierSensorPin = A3;
-barrierLEDPin = 9;
+const int barrierSensorPin = A3;
+const int barrierLEDPin = 9;
 
 void setup() {
   // declare the LED pins as OUTPUTs:
