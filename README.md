@@ -4,14 +4,14 @@
 
 Barrier/distance IR sensor Arduino library  working with lightness changes
 
- - **Can`t calibrate if lightness changes very fast * ([look below](#-fast-ligtness-changes-problem))**<br/>
- - Sensivity reduction on sun lightness<br/>
- - Measure with dalay only (default is 1 ms)<br/>
- + Use sensor calibration to ignore lightness changes<br/>
- + Use less power<br/>
- + High sensivity (70mm at evening lights)<br/>
- + Can detect black objects (30mm at evening lights)<br/>
- + Can use getRaw() to check how far barrier is (slow down robot moving to stay closer to barrier and avoid collapse)
+* + Use sensor calibration to ignore lightness changes<br/>
+* + Use less power<br/>
+* + High sensivity (70mm at evening lights)<br/>
+* + Can detect black objects (30mm at evening lights)<br/>
+* + Can use getRaw() to check how far barrier is (slow down robot moving to stay closer to barrier and avoid collapse)
+* - **Can`t calibrate if lightness changes very fast * ([look below](#-fast-ligtness-changes-problem))**<br/>
+* - Sensivity reduction on sun lightness<br/>
+* - Measure with dalay only (default is 1 ms)<br/>
 
 For work without delay use <a href="https://github.com/el-fuego/IRBarrierSensor">IRBarrierSensor</a>
 
