@@ -50,13 +50,13 @@ void loop() {
 }
 ```
 
-Advanced configuration:
+#### Advanced configuration
 ```cpp
 const int barrierSensorPin = A3;
 const int barrierLEDPin = 9;
-float sensivityLevel = 0.1; // 0.0..1.0
-int measurementTimeMicroSeconds = 1000; // 100..3000 is recomended
-float calibrationLevel = 0.05; // 0.0..1.0 
+const float sensivityLevel = 0.1; // 0.0..1.0
+const int measurementTimeMicroSeconds = 1000; // 100..3000 is recomended
+const float calibrationLevel = 0.05; // 0.0..1.0 
 
 IRBarrierSensorPulsedLED barrierSensor(
    {barrierSensorPin, barrierLEDPin},
