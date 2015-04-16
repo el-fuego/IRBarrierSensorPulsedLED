@@ -65,7 +65,8 @@ float IRBarrierSensorPulsedLED::getRaw () {
     calibrateSensor(values);
   }
   
-  bool hasBarrier = lightValuesDeviation(values) > sensivityLevel;
+  float deviation = lightValuesDeviation(values);
+  bool hasBarrier = deviation > sensivityLevel;
   
   // calibrate sensor on lightness changes
   // do not calibrate near to barrier 

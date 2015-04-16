@@ -20,6 +20,6 @@ void loop() {
   digitalWrite(LED_BUILTIN, barrierSensor.hasBarrier() ? HIGH : LOW);
   
   // print current deviation
-  Serial.writeln(barrierSensor.getRaw());
+  Serial.println(barrierSensor.getRaw());
   delay(100);
 }
