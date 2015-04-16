@@ -21,6 +21,51 @@ For work without delay use <a href="https://github.com/el-fuego/IRBarrierSensor"
 Vcc is +5V<br>
 Decrease measurement time for hight voltage and increase for low
 
+#### Example
+```cpp
+#include <IRBarrierSensorPulsedLED.h>
+
+// setup pins
+const int barrierSensorPin = A3;
+const int barrierLEDPin = 9;
+
+void setup() {
+  // declare the LED pins as OUTPUTs:
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(barrierLEDPin, OUTPUT);
+
+  // setup serial output
+  Serial.begin(9600);
+}
+
+IRBarrierSensorPulsedLED barrierSensor({barrierSensorPin, barrierLEDPin});
+
+void loop() {
+  // turn ON builtin LED if barrier is detected
+  digitalWrite(LED_BUILTIN, barrierSensor.hasBarrier() ? HIGH : LOW);
+  
+  // print current deviation
+  Serial.writeln(barrierSensor.getRaw());
+  delay(100);
+}
+```
+
+Advanced configuration:
+```cpp
+const int barrierSensorPin = A3;
+const int barrierLEDPin = 9;
+float sensivityLevel = 0.1; // 0.0..1.0
+int measurementTimeMicroSeconds = 1000; // 100..3000 is recomended
+float calibrationLevel = 0.05; // 0.0..1.0 
+
+IRBarrierSensorPulsedLED barrierSensor(
+   {barrierSensorPin, barrierLEDPin},
+   sensivityLevel,
+   measurementTimeMicroSeconds,
+   calibrationLevel
+);
+```
+
 #### Algorithm
 1. Measure sensor values with LED turned OFF and ON
 2. Calibrate sensors on robot power ON (store current sensors values)
