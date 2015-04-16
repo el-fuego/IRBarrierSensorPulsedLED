@@ -1,7 +1,7 @@
 # IRBarrierSensorPulsedLED
 Barrier/distance IR sensor Arduino library  working with lightness changes. LED work in pulse mode (is turned on for measurements only)
 
- - **Can`t calibrate if lightness changes very fast (robot turn around)**<br/>
+ - **Can`t calibrate if lightness changes very fast * (look below)**<br/>
  - Sensivity reduction on sun lightness<br/>
  - Measure with dalay only (default is 1 ms)<br/>
  + Use sensor calibration to ignore lightness changes<br/>
@@ -30,8 +30,8 @@ Decrease measurement time for hight voltage and increase for low
 4. Barrier is detected when calibrated and current values with LED turned ON deviation is more than limit
 5. Calibrate sensor if don`t have barrier and old calibrated and current values with LED turned OFF is more than limit
 
-#### Fast ligtness changes problem
-Can`t catch calibration, when moving from darkness to lightness is very fast<br/>
+#### * Fast ligtness changes problem
+Can`t catch calibration, when moving from darkness to lightness is very fast, for example, your robot turns around<br/>
 
 You can **use senfor screening** from daylights for this and sensivity problem
 
