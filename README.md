@@ -1,7 +1,7 @@
-# IRBarrierSensorPulsedLED
-Barrier/distance IR sensor Arduino library  working with lightness changes. LED work in pulse mode (is turned on for measurements only)
+# IR Barrier Sensor for Arduino with LED turned for measurements only
+Barrier/distance IR sensor Arduino library  working with lightness changes
 
- - **Can`t calibrate if lightness changes very fast * (look below)**<br/>
+ - **Can`t calibrate if lightness changes very fast * ([look below](#-fast-ligtness-changes-problem))**<br/>
  - Sensivity reduction on sun lightness<br/>
  - Measure with dalay only (default is 1 ms)<br/>
  + Use sensor calibration to ignore lightness changes<br/>
