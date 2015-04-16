@@ -12,15 +12,9 @@ Barrier/distance IR sensor Arduino library  working with lightness changes
 
 For work without delay use <a href="https://github.com/el-fuego/IRBarrierSensor">IRBarrierSensor</a>
 
-#### Curcit
-```
-Dout -----------+-) ->  LED
-GND  -------------) ->
+#### Circuit 
+<img src="circuit.png" />
 
-Vcc  --=470K=--
-Ain  ---------^-+-( <-  Photodiode
-GND  -------------( <-
-```
 Vcc is +5V<br>
 Decrease measurement time for hight voltage and increase for low
 
